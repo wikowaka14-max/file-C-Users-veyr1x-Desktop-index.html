@@ -1,144 +1,176 @@
 <!DOCTYPE html>
-<html>
-<head> <title>veyr1x</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>	
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>veyr1x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем иконку Telegram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Фон с градиентом */
+        body {
+            background: linear-gradient(-45deg, #111, #1a1a1a, #222, #111);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Карточка */
+        .card {
+            background-color: rgba(28, 28, 28, 0.85);
+            max-width: 420px;
+            width: 90%;
+            margin: 80px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInCard 1s forwards;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* лёгкий подъём при наведении */
+        }
+
+        @keyframes fadeInCard {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Градиент заголовка */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Блок Telegram */
+        .telegram {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tg-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Кнопка */
+        .btn {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInBtn 1s 0.8s forwards;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: lightblue;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        @keyframes fadeInBtn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Адаптация под телефон */
+        @media (max-width: 600px) {
+            .card {
+                margin: 40px auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+
 <body>
 <div class="card">
-	<h1>Настройка и ускорение ПК</h1>
-	<p>Удаляю вирусы, чищу сис-му, UP GAMING</p>
-<ul>
-	<li>Чистка вирусов</li>
-	<li>Ускорение пк</li>
-	<li>Установка программ</li>
-	<li>Помощь с установкой/переустоновки OC</li>
-</ul>
-	<div class="telegram">
-    <span class="tg-text">Мой телеграм:</span>
-    <a href="https://t.me/veyr_1x" class="btn">click</a>
-</div>
+    <h1>Настройка и ускорение ПК</h1>
+    <p>Удаляю вирусы, чищу систему, оптимизирую Windows для GAMING</p>
+
+    <ul>
+        <li>Чистка вирусов</li>
+        <li>Ускорение ПК</li>
+        <li>Установка программ</li>
+        <li>Помощь с установкой / переустановкой ОС</li>
+    </ul>
+
+    <div class="telegram">
+        <span class="tg-text">Telegram:</span>
+        <a href="https://t.me/veyr_1x" class="btn">
+            <i class="fab fa-telegram-plane"></i> veyr1x
+        </a>
+    </div>
 </div>
 </body>
-<style>
-body {
-    /* фон с анимацией градиента */
-    background: linear-gradient(-45deg, #111, #1a1a1a, #222, #111);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-.card {
-    background-color: rgba(28, 28, 28, 0.85); /* чуть прозрачная карточка */
-    max-width: 420px;
-    width: 90%;
-    margin: 80px auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
-
-    display: flex;
-    flex-direction: column;
-
-    /* анимация появления */
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInCard 1s forwards;
-}
-
-@keyframes fadeInCard {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1 {
-    color: lightblue;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-.telegram {
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.tg-text {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.btn {
-    background-color: #2e2e2e;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-
-    /* плавное появление кнопки */
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInBtn 1s 0.8s forwards; /* задержка 0.8s */
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: lightblue;
-    color: black;
-    transform: scale(1.05);
-}
-
-@keyframes fadeInBtn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        margin: 40px auto;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-}
-</style>
-
-
-
 </html>
