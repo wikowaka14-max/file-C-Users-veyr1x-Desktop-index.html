@@ -21,75 +21,128 @@
 </body>
 <style>
 body {
-    background-color: #111;
+    /* фон с анимацией градиента */
+    background: linear-gradient(-45deg, #111, #1a1a1a, #222, #111);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
     color: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.card {
+    background-color: rgba(28, 28, 28, 0.85); /* чуть прозрачная карточка */
+    max-width: 420px;
+    width: 90%;
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+
+    /* анимация появления */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInCard 1s forwards;
+}
+
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
     color: lightblue;
-	font-size: 45px;
-}
-p{ 
-	color: white;
-	font-size: 18px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-a {
-    color: gray;
-    font-size: 20px;
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
-.card {
-    background-color: #222;
-    max-width: 400px;  /* максимум 400 */
-    width: 90%;        /* на телефоне займет 90% экрана */
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 15px;
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
 
+li {
+    margin-bottom: 8px;
+}
+
+.telegram {
+    margin-top: auto;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
-	.btn {
-    background-color: gray;
-    color: white;
-    padding: 20px 50px;
-    text-decoration: none;
-    border-radius: 5px;
+
+.tg-text {
+    font-size: 18px;
     font-weight: bold;
-	}
-	@media (max-width: 600px) {
+}
+
+.btn {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+
+    /* плавное появление кнопки */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInBtn 1s 0.8s forwards; /* задержка 0.8s */
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: lightblue;
+    color: black;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInBtn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
     .card {
         margin: 40px auto;
-        padding: 15px;
+        padding: 20px;
     }
 
-    h2 {
-        font-size: 20px;
+    h1 {
+        font-size: 24px;
     }
 
     p {
         font-size: 14px;
     }
-	}
-	.telegram {
-    margin-top: auto;          /* чтобы блок ушёл вниз карточки */
-    display: flex;             /* ставим элементы в ряд */
-    align-items: center;       /* выравнивание по вертикали */
-    justify-content: center;   /* центр всей группы */
-    gap: 15px;                 /* расстояние между текстом и кнопкой */
 }
-
-.tg-text {
-    font-size: 20px;           /* размер как у кнопки */
-    font-weight: bold;
-}
-
 </style>
 
 
+
 </html>
+
 
 
 
