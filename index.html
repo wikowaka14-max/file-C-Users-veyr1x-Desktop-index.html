@@ -12,8 +12,9 @@
 	<li>Ускорение пк</li>
 	<li>Установка программ</li>
 </ul>
-	<p2>Мой телеграмм:</p2>
-<a href="https://t.me/veyr_1x" class="btn">click</a>
+	<div class="telegram">
+    <span class="tg-text">Мой телеграм:</span>
+    <a href="https://t.me/veyr_1x" class="btn">veyr1x</a>
 </div>
 </body>
 <style>
@@ -27,11 +28,11 @@ h1 {
     color: lightblue;
 	font-size: 45px;
 }
-p1{ 
-	color: white
+p{ 
+	color: white;
 	font-size: 25px;
 }
-p2{ 
+p1{ 
 	color:black;
 }
 a {
@@ -74,10 +75,24 @@ a {
         font-size: 14px;
     }
 	}
+	.telegram {
+    margin-top: auto;          /* чтобы блок ушёл вниз карточки */
+    display: flex;             /* ставим элементы в ряд */
+    align-items: center;       /* выравнивание по вертикали */
+    justify-content: center;   /* центр всей группы */
+    gap: 15px;                 /* расстояние между текстом и кнопкой */
+}
+
+.tg-text {
+    font-size: 20px;           /* размер как у кнопки */
+    font-weight: bold;
+}
+
 </style>
 
 
 </html>
+
 
 
 
