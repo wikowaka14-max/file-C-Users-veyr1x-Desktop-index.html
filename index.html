@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head> <title>veyr1x</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>	
 <body>
 <div class="card">
 	<h1>Настройка и ускорение ПК</h1>
@@ -39,11 +41,14 @@ a {
 
 .card {
     background-color: #222;
-    width: 400px;
+    max-width: 400px;  /* максимум 400 */
+    width: 90%;        /* на телефоне займет 90% экрана */
     margin: 100px auto;
     padding: 20px;
     border-radius: 15px;
-    text-align: left;
+
+    display: flex;
+    flex-direction: column;
 }
 	.btn {
     margin-top: auto;   /* 🔥 это КЛЮЧ */
@@ -54,10 +59,26 @@ a {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+	}
+	@media (max-width: 600px) {
+    .card {
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+	}
 </style>
 
 
 </html>
+
 
 
 
